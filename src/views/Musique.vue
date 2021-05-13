@@ -56,7 +56,7 @@ export default {
     methods: {
         fetchVideosComptines() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/5')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/5')
                 .then(response => {
                     this.videosComptines = response.data
                     console.log(response)
@@ -64,7 +64,7 @@ export default {
         },
         fetchVideosChansons() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/6')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/6')
                 .then(response => {
                     this.videosChansons = response.data
                 })

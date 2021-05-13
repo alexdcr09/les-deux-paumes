@@ -56,14 +56,14 @@ export default {
     methods: {
         fetchVideosCuisine() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/3')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/3')
                 .then(response => {
                     this.videosCuisine = response.data
                 })
         },
         fetchVideosApprendre() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/4')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/4')
                 .then(response => {
                     this.videosApprendre = response.data
                     console.log(response)

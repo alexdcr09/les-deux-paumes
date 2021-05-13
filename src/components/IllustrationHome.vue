@@ -1,13 +1,13 @@
 <template>
     <div class="flex lg:h-screen justify-center h-full">
         <div class="sm:m-auto flex flex-wrap justify-center md:w-3/5 mt-2">
-            <h1 v-bind:style="{ fontSize: fontSize + 'px' }" class="text-4xl text-blue font-bold sm:text-6xl">
+            <h1 class="text-4xl text-blue font-bold sm:text-6xl">
                 LES DEUX PAUMES
             </h1>
-            <h3 v-bind:style="{ fontSize: fontSize + 'px' }" class="text-3xl text-dark-900 font-bold sm:mt-4">
+            <h3 class="text-3xl text-dark-900 font-bold sm:mt-4">
                 FAITES PARTIS DE L’AVENTURE !
             </h3>
-            <p v-bind:style="{ fontSize: fontSize + 'px' }" class="text-dark-900 font-medium mx-5 sm:mx-20 sm:text-xl text-sm ">
+            <p class="text-dark-900 font-medium mx-5 sm:mx-20 sm:text-xl text-sm ">
                 Soyez les premiers à soutenir notre projet et à proposer le meilleur contenu vidéo pour nos enfants !
             </p>
             <div class="sm:mt-4 sm:ml-3 mt-4 flex justify-center">
@@ -38,18 +38,14 @@
             </router-link>
         </div>
     </div>
-    <Options/>
 </template>
 
 <script>
-import Options from '../components/Options.vue'
 
 export default {
   name: 'IllustrationHome',
   props: ['title', 'items'],
   components: {
-        
-        Options
     },
   data () {
     return {

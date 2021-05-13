@@ -55,14 +55,14 @@ export default {
     methods: {
         fetchVideosPeppaPig() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/1')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/1')
                 .then(response => {
                     this.videosPeppaPig = response.data
                 })
         },
         fetchVideosHistoiresAnimes() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/7')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/sous_categories/7')
                 .then(response => {
                     this.videosHistoiresAnimes = response.data
                     console.log(response)

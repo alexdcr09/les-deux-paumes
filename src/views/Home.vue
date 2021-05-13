@@ -3,9 +3,6 @@
         <Header/>
             <main class="font-body">
                 <IllustrationHome/>
-                <p v-bind:style="{ fontSize: fontSize + 'rem' }"> 
-                    test akegkazjhejahzkjhazkejhza aze,az e,azbeaz
-                </p>
                 <div>
                     <div v-if="videosActivites.length > 0 && videosAnimes.length > 0 && videosMusique.length > 0">
                         <BlocVideos :categorie="videosActivites"/>
@@ -15,7 +12,6 @@
                 </div>
             </main>
         <Footer/>
-        <Options/>
     </div>
 </template>
 
@@ -24,7 +20,6 @@ import BlocVideos from '../components/BlocVideos.vue'
 import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 import IllustrationHome from '../components/IllustrationHome.vue'
-import Options from '../components/Options.vue'
 import axios from 'axios'
 
 export default {
@@ -34,14 +29,12 @@ export default {
         BlocVideos,
         Footer,
         IllustrationHome,
-        Options
     },
     data() {
         return {
             videosAnimes: [],
             videosActivites: [],
             videosMusique: [],
-             fontSize: 1.25
         }   
     },
     mounted() {
@@ -52,21 +45,21 @@ export default {
     methods: {
         fetchVideosAnimes() {
             axios
-                .get('http://localhost:3000/videos/categories/1')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/1')
                 .then(response => {
                     this.videosAnimes = response.data
                 })
         },
         fetchVideosActivites() {
             axios
-                .get('http://localhost:3000/videos/categories/2')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/2')
                 .then(response => {
                     this.videosActivites = response.data
                 })
         },
         fetchVideosMusique() {
             axios
-                .get('http://localhost:3000/videos/categories/3')
+                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/3')
                 .then(response => {
                     this.videosMusique = response.data
                 })
