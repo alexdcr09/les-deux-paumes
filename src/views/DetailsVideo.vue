@@ -43,7 +43,7 @@ export default {
     methods: {
         fetchVideo() {
             axios
-                .get(`https://lesdeuxpaumes-api.herokuapp.com/videos/${this.$route.params.id}`)
+                .get(`https://les-deux-paumes-api.herokuapp.com/videos/${this.$route.params.id}`)
                 .then(response => {this.video = response.data; })
         },
     }

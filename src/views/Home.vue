@@ -45,21 +45,21 @@ export default {
     methods: {
         fetchVideosAnimes() {
             axios
-                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/1')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/1')
                 .then(response => {
                     this.videosAnimes = response.data
                 })
         },
         fetchVideosActivites() {
             axios
-                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/2')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/2')
                 .then(response => {
                     this.videosActivites = response.data
                 })
         },
         fetchVideosMusique() {
             axios
-                .get('https://lesdeuxpaumes-api.herokuapp.com/videos/categories/3')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/3')
                 .then(response => {
                     this.videosMusique = response.data
                 })
