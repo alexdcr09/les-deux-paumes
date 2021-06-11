@@ -45,21 +45,21 @@ export default {
     methods: {
         fetchVideosAnimes() {
             axios
-                .get('https://localhost:3000/videos/categories/1')
+                .get('http://localhost:3000/videos/categories/1')
                 .then(response => {
                     this.videosAnimes = response.data
                 })
         },
         fetchVideosActivites() {
             axios
-                .get('https://localhost:3000/videos/categories/2')
+                .get('http://localhost:3000/videos/categories/2')
                 .then(response => {
                     this.videosActivites = response.data
                 })
         },
         fetchVideosMusique() {
             axios
-                .get('https://localhost:3000/videos/categories/3')
+                .get('http://localhost:3000/videos/categories/3')
                 .then(response => {
                     this.videosMusique = response.data
                 })
