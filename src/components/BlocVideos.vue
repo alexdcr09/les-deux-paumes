@@ -4,7 +4,7 @@
             <h2 class="text-center sm:text-left my-4">
                 <a href="#">
                     <span class="text-left text-blue hover:underline text-4xl font-bold py-1">
-                        {{ categorie[0].name }} 
+                        {{ categorie.name }} 
                     </span>
                 </a>
             </h2>
